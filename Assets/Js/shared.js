@@ -3,18 +3,7 @@
 Loader scripts
 --------------------------------------------- 
 */
-document.addEventListener("DOMContentLoaded", function () {
-  var preloader = document.getElementById("js-preloader");
-  preloader.style.opacity = 0;
-  setTimeout(function () {
-    preloader.style.display = "none";
-  }, 600);
-});
 
-window.addEventListener("load", function () {
-  var preloader = document.getElementById("js-preloader");
-  preloader.style.display = "none";
-});
 
 /* 
 ---------------------------------------------
