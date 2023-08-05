@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flix Nomad</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="assets/css/shared.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+  </head>
+  <body data-bs-theme="light">
+    <!-------------------------------------------------------------------------------------------------
+HEADER 
+------------------------------------------------------------------------------------------------->
+    <div class="container-fluid text-center p-1">
+      <h1 class="welcome">Welcome !</h1>
+      <p>"Movies at Your Fingertips: Fast Downloads, Endless Entertainment!"</p>
+    </div>
+    <nav class="navbar navbar-expand-lg bg-success sticky-top">
+      <div class="container-fluid">
+        <button id="darkModeButton">
+          <img
+            id="themeIcon"
+            src="assets/images/moon.svg"
+            alt="darkMode"
+            height="40"
+          />
+        </button>
+        <a class="navbar-brand" href="#">
+          <img
+            src="assets/images/logo.svg"
+            alt="Logo"
+            height="40"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul
+            class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+            style="--bs-scroll-height: 150px"
+          >
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Link
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">fuck Mode</a>
+            </li>
+          </ul>
+          <span class="big-screen-search">
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-dark" type="submit">Search</button>
+            </form>
+          </span>
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-3 small-screen-search">
+      <form class="d-flex" role="search">
+        <input
+          class="form-control me-2 border-success"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+    <div class="container mt-3">
+      <div
+        id="carouselExampleAutoplaying"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="assets/images/carousel/IMG_20230805_112339_856.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="assets/images/carousel/IMG_20230805_112333_619.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="assets/images/carousel/IMG_20230805_112323_478.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <!-------------------------------------------------------------------------------------------------
+Movie List 
+------------------------------------------------------------------------------------------------->
+    <div class="card text-center featured p-3">
+      <div class="card-header">Featured</div>
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">
+          With supporting text below as a natural lead-in to additional content.
+        </p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+      <div class="card-footer text-muted">2 days ago</div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row g-3">
+        <div class="col-6 col-sm-4 col-md-3">
+          <div class="card h-100 border-success p-1">
+            <img
+              src="assets/images/movies/6-underground-2019.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-footer">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3">
+          <div class="card h-100 border-success p-1">
+            <img
+              src="assets/images/movies/6-underground-2019.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-footer">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3">
+          <div class="card h-100 border-success p-1">
+            <img
+              src="assets/images/movies/6-underground-2019.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-footer">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3">
+          <div class="card h-100 border-success p-1">
+            <img
+              src="assets/images/movies/6-underground-2019.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-footer">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3">
+          <div class="card h-100 border-success p-1">
+            <img
+              src="assets/images/movies/6-underground-2019.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-footer">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3">
+          <div class="card h-100 border-success p-1">
+            <img
+              src="assets/images/movies/6-underground-2019.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-footer">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3">
+          <div class="card h-100 border-success p-1">
+            <img
+              src="assets/images/movies/6-underground-2019.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-footer">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3">
+          <div class="card h-100 border-success p-1">
+            <img
+              src="assets/images/movies/6-underground-2019.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-footer">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-------------------------------------------------------------------------------------------------
+Movie List 
+------------------------------------------------------------------------------------------------->
+    <div class="container mt-5">
+      <div class="movie__main" id="js-movie__main"></div>
+    </div>
+    <!-------------------------------------------------------------------------------------------------
+FOOTER 
+------------------------------------------------------------------------------------------------->
+    <div class="container-fluid">
+      <footer class="py-3 mt-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-muted">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-muted">Features</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-muted">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-muted">FAQs</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-muted">About</a>
+          </li>
+        </ul>
+        <p class="text-center text-muted">&copy; 2023 Flix Nomad, Inc</p>
+      </footer>
+    </div>
+    <script
+      src="assets/database/db-main-movie.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <script
+      src="assets/js/shared.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
