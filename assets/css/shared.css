@@ -1,0 +1,273 @@
+/*--------------------------------------------------------------------------------------------------------------------------------------------
+Imports and Resets
+--------------------------------------------------------------------------------------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------
+Utilities
+--------------------------------------------------------------------------------------------------------------------------------------------*/
+.nowrap {
+  white-space: nowrap;
+}
+
+.line-element {
+  position: relative;
+  /* Add styles for the element here, e.g., text-align, etc. */
+}
+
+.line-element::before,
+.line-element::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: calc(
+    (100% - 250px) / 2
+  ); /* The line width is calculated based on remaining space */
+  height: 2px; /* Adjust the height of the line */
+  background-color: #dc3545; /* Adjust the color of the line */
+}
+
+.line-element::before {
+  left: 0;
+}
+
+.line-element::after {
+  right: 0;
+}
+
+/* #loader {
+  background: #000;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+.spinner {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  border: 4.5px solid #0000;
+  border-radius: 50%;
+  border-color: #dbdcef #0000;
+  animation: spinner-e04l1k 1s infinite linear;
+}
+
+.spinner::before,
+.spinner::after {
+  content: "";
+  grid-area: 1/1;
+  margin: 2.2px;
+  border: inherit;
+  border-radius: 50%;
+}
+
+.spinner::before {
+  border-color: red #0000;
+  animation: inherit;
+  animation-duration: 0.5s;
+  animation-direction: reverse;
+}
+
+.spinner::after {
+  margin: 8.9px;
+}
+
+@keyframes spinner-e04l1k {
+  100% {
+    transform: rotate(1turn);
+  }
+} */
+
+body {
+  min-width: 350px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------
+Header
+--------------------------------------------------------------------------------------------------------------------------------------------*/
+/* header a {
+  color: #fff !important;
+}
+
+.dropdown-menu li a {
+  color: #dc3545 !important;
+} */
+.carousel-item img {
+  border-radius: 9px;
+}
+
+/* .welcome {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 900;
+} */
+
+#darkModeButton {
+  background-color: transparent;
+  border: none;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.small-screen-search {
+  margin-top: 100px;
+}
+
+@media (max-width: 991px) {
+  .container-fluid.small-screen-search {
+    display: block; /* Show the element on screens less than 992px */
+  }
+  .big-screen-search {
+    display: none; /* Hide the form on screens less than 992px */
+  }
+}
+
+@media (min-width: 992px) {
+  .container.small-screen-search {
+    display: none; /* Hide the element on screens 992px and higher */
+  }
+  .big-screen-search {
+    display: block; /* Show the form on screens 992px and higher */
+  }
+  .trending {
+    margin-top: 85px;
+  }
+  .m-top-100px {
+    margin-top: 100px;
+  }
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------
+Featured
+--------------------------------------------------------------------------------------------------------------------------------------------*/
+.featured {
+  color: #fff !important;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../images/header-image.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------
+Movie List
+--------------------------------------------------------------------------------------------------------------------------------------------*/
+.movie__main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 10px;
+  margin-bottom: 20px;
+}
+
+.movie__container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #dc3545;
+}
+
+.movie__link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.movie__container:hover,
+.movie__container:focus {
+  opacity: 0.8;
+}
+
+.movie__container__image {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  margin-right: 0.5rem;
+}
+
+.movie__container__image img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.movie__container__text {
+  height: 148px;
+  overflow-y: hidden;
+}
+
+.movie__name,
+.movie__genre,
+.movie__ratings,
+.movie__description {
+  margin: 0;
+}
+
+.movie__container__text {
+  flex-grow: 0;
+}
+
+.movie__name {
+  font-size: 22px;
+}
+
+.movie__genre {
+  font-size: 12px;
+}
+
+.movie__description {
+  font-size: 0.8rem;
+}
+/*--------------------------------------------------------------------------------------------------------------------------------------------
+Footer
+--------------------------------------------------------------------------------------------------------------------------------------------*/
+footer {
+  margin-bottom: 0px;
+}
+
+.footer-warning {
+  font-size: 0.8rem;
+}
+
+.movie-title-heading {
+  font-family: "Merriweather", serif;
+  text-transform: capitalize;
+}
+
+.movie-title-genre span {
+  margin: 5px;
+}
+
+.movie-banner img {
+  width: 90%;
+  height: auto;
+  border-radius: 10px;
+}
+
+#related ul {
+  list-style-type: none;
+  padding: 10px;
+}
+
+#related ul li {
+  margin: 10px 0;
+  text-decoration: underline;
+}
