@@ -15,10 +15,6 @@ function rendersideSlide() {
           <div
             class="card-img-overlay d-flex flex-column justify-content-center align-items-center text-center featured-content"
           >
-            <h5 class="card-title">${item.name}</h5>
-            <p class="card-text">
-              ${item.details}
-            </p>
           </div>
           </a>
       </div>
