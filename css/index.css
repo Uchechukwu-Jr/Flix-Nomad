@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: background 0.5s;
+}
+body {
+  min-width: 350px;
+}
+#loader {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow: hidden;
+}
+#loader img {
+  width: 250px;
+  height: 250px;
+  animation: loader 1.5s linear infinite;
+}
+@keyframes loader {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+#main {
+  display: none;
+  transition: display 1s;
+}
+.dropdown-menu {
+  transition: all 0.5s;
+}
+.featured {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(4, minmax(90%, 1fr));
+  overflow-x: scroll;
+}
+.featured-link {
+  text-decoration: none;
+}
+.featured-content {
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  color: white;
+}
+@media screen and (min-width: 600px) {
+  .card-title {
+    font-size: 3rem;
+  }
+  .card-text {
+    font-size: 1.75rem;
+  }
+}
+.holder {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  place-content: center;
+}
+.holder.no-matches {
+  grid-template-columns: 1fr; /* Make the h1 take up the full width */
+}
+.item {
+  height: 310px;
+  border: 3px solid #dc3545;
+  overflow-y: hidden;
+}
+.movie-img {
+  background-size: cover;
+  height: 250px;
+}
+.movie-link {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+/* .container-holder-side {
+  width: 100%;
+  overflow-x: scroll;
+}
+.holder-side {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(250px, 1fr));
+  gap: 10px;
+}
+ */
+#floating-social {
+  position: fixed;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 20px;
+  right: 20px;
+  background: #dc3545;
+  color: white;
+  font-size: calc(30px + 1vw);
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+.movie-title-heading {
+  font-family: "Merriweather", serif;
+  text-transform: capitalize;
+}
+
+.movie-title-genre span {
+  margin: 5px;
+}
+
+.movie-banner img {
+  width: 90%;
+  height: auto;
+  border-radius: 10px;
+}
+
+#related ul {
+  list-style-type: none;
+  padding: 10px;
+}
+
+#related ul li {
+  margin: 10px 0;
+  text-decoration: underline;
+}
+.no-decoration {
+  text-decoration: none;
+}
